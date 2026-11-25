@@ -25,8 +25,13 @@ function resolveOutputDir(): string {
 
 function main(): void {
   // Gate: a single line of 1-200 characters, not only whitespace.
+  // The joke's turn: the fridge imagines a VIP list, but its whole job
+  // is guarding leftover pizza — so the roast targets the midnight rule
+  // itself, not smart homes in general.
   if (LINE.length < 1 || LINE.length > 200) {
-    throw new Error(`Line must be 1-200 characters, got ${LINE.length}.`);
+    throw new Error(
+      `Roast line must be 1-200 characters to pass the gate, got ${LINE.length}.`,
+    );
   }
   if (LINE.trim().length === 0) {
     throw new Error("Line must not be only whitespace.");
